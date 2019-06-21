@@ -20,6 +20,5 @@ func main() {
 		con, _ := net.Dial("tcp", host)
 		fmt.Fprintln(con,dir)
 		con.Close()
-
 	}
  }
