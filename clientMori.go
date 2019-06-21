@@ -36,7 +36,10 @@ func Client_1(subdir, serverdir string ){
 	fmt.Println(nodos)
 }
 
-func main(){
+func main()
+{
+
+
 
 
 	nodos = make(map[string]bool)
