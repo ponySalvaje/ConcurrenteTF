@@ -10,7 +10,7 @@ import (
 
 const (
 	PROT = "tcp"
-	HOST = "10.21.61.184:8002"
+	HOST = "localhost:8005"
 )
 
 var nodes map[string]bool

@@ -11,7 +11,6 @@ import (
 var nodos  map[string]bool
 
 func Client_1(subdir, serverdir string ){
-
 	host := fmt.Sprintf("%s:8001", serverdir)
 	fmt.Println(host)
 	con, _ := net.Dial("tcp",host)
@@ -36,18 +35,10 @@ func Client_1(subdir, serverdir string ){
 	fmt.Println(nodos)
 }
 
-func main()
-{
-
-
-
-
+func main() {
 	nodos = make(map[string]bool)
-
-	nodos["10.21.61.168"] = true
-
-	Client_1("10.21.61.175", "10.21.61.168")
-
+	nodos["7000"] = true
+	Client_1("7000", "localhost"
 }
 
 

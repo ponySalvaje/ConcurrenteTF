@@ -11,7 +11,7 @@ var nodos map[string]bool
 
 func main() {
 	fmt.Println("Launching server...")
-	ln, _ := net.Listen("tcp", "10.21.61.168:8001")
+	ln, _ := net.Listen("tcp", "localhost:8001")
 	for {
 		connCliente1, _ := ln.Accept()
 		go handle(connCliente1)
@@ -19,12 +19,11 @@ func main() {
 }
 
 func handle(conn net.Conn) {
-	//connCliente2, _ := net.Dial("tcp", "10.21.61.165:8080")
 
 	nodos = make(map[string]bool)
-	nodos["10.21.61.168"] = true
-	nodos["hola"] = true
-	nodos["chau"] = true
+	nodos["8002"] = true
+	nodos["8003"] = true
+	nodos["8004"] = true
 
 	//Recibir mensaje con IP del cliente1
 	r := bufio.NewReader(conn)
